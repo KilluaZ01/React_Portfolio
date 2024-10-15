@@ -1,4 +1,4 @@
-import aboutImg from "../assets/About.jpg";
+import aboutImg from "../assets/about.jpg";
 import { ABOUT_TEXT1 } from "../constants";
 import { ABOUT_TEXT2 } from "../constants";
 import { ABOUT_TEXT3 } from "../constants";
