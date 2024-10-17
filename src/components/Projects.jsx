@@ -1,7 +1,11 @@
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { useState } from "react";
 
 const Projects = () => {
+  const [hoveredProject, setHoveredProject] = useState(null);
+
   return (
     <div className="border-b border-neutral-600 pb-4">
       <motion.h1
@@ -36,11 +40,29 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
+              <div className="flex justify-between items-center">
+                <h6 className="mb-2 font-semibold">{project.title}</h6>
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setHoveredProject(index)}
+                  onMouseLeave={() => setHoveredProject(null)}
+                  className="relative inline-block text-lg font-light cursor-pointer"
+                >
+                  <FaGithub className="text-4xl mb-2 text-white hover:text-purple-800" />
+                  {hoveredProject === index && (
+                    <span className="absolute bottom-full mb-2 rounded-lg bg-gray-800 px-2 py-1 text-center text-sm text-white">
+                      View Source Code
+                    </span>
+                  )}
+                </a>
+              </div>
+
               <p className="mb-4 text-neutral-400">{project.description}</p>
               {project.technologies.map((tech, index) => (
                 <span
-                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900"
+                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
                   key={index}
                 >
                   {tech}

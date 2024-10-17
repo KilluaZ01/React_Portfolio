@@ -1,7 +1,5 @@
 import projectBrickSync from "../assets/projects/project_BrickSync.png";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import projectPersonalPortfolio from "../assets/projects/project_PersonalPortfolio.png";
 
 import certificateJsBasics from "../assets/certificates/certificate_jsBasics.jpg";
 import certificateJsIntermediate from "../assets/certificates/certificate_jsIntermediate.jpg";
@@ -28,21 +26,16 @@ export const PROJECTS = [
     image: projectBrickSync,
     description:
       "A fully functional full stack inventory & expense tracking webapp with features like product listing, inventory tracking, expense tracking, vehicle management and user authentication.",
-    technologies: ["HTML", "CSS", "Tailwind", "React", "Node.js", "MongoDB"],
+    technologies: ["React", "Tailwind", "Node.js", "MongoDB"],
+    githubLink: "https://github.com/KilluaZ01/BrickSync.git",
   },
   {
-    title: "Portfolio Website",
-    image: project3,
+    title: "Personal Portfolio",
+    image: projectPersonalPortfolio,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Tailwind"],
-  },
-  {
-    title: "Weather App",
-    image: project4,
-    description:
-      "A platform for Dynamic weather updates by the name of the location using API.",
-    technologies: ["HTML", "CSS", "React"],
+    technologies: ["React", "Tailwind"],
+    githubLink: "https://github.com/KilluaZ01/React_Portfolio.git",
   },
 ];
 
@@ -61,7 +54,7 @@ export const CERTIFICATE = [
     image: certificateJsIntermediate,
     description:
       "This course covered advanced JavaScript concepts such as truthy and falsy values, ternary operators, recursion, and asynchronous programming (Fetch API, promises, async/await). I also worked with JSON, explored variable scope, and hoisting. A project on fetching and displaying movie data helped solidify these concepts.",
-    date: "26th August, 2024",
+    date: "30th August, 2024",
   },
 ];
 
