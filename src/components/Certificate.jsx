@@ -22,13 +22,19 @@ const Certificate = () => {
               transition={{ duration: 1 }}
               className="w-full lg:w-1/4"
             >
-              <img
-                className="mb-6 rounded"
-                src={certificate.image}
-                width={150}
-                height={150}
-                alt={certificate.title}
-              />
+              <a
+                href={certificate.certificateLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="mb-6 rounded"
+                  src={certificate.image}
+                  width={150}
+                  height={150}
+                  alt={certificate.title}
+                />
+              </a>
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}

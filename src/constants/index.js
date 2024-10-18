@@ -47,6 +47,7 @@ export const CERTIFICATE = [
     description:
       "Completed a foundational JavaScript course covering essential topics such as data types, operators, control flow, functions, objects, arrays, and basic error handling.",
     date: "26th August, 2024",
+    certificateLink: "https://programiz.pro/certificates/B7B0A8A62F2E",
   },
   {
     title: "Learn JavaScript Intermediate",
@@ -55,6 +56,7 @@ export const CERTIFICATE = [
     description:
       "This course covered advanced JavaScript concepts such as truthy and falsy values, ternary operators, recursion, and asynchronous programming (Fetch API, promises, async/await). I also worked with JSON, explored variable scope, and hoisting. A project on fetching and displaying movie data helped solidify these concepts.",
     date: "30th August, 2024",
+    certificateLink: "https://programiz.pro/certificates/A9656AC427E6",
   },
 ];
 
