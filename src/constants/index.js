@@ -3,6 +3,7 @@ import projectPersonalPortfolio from "../assets/projects/project_PersonalPortfol
 
 import certificateJsBasics from "../assets/certificates/certificate_jsBasics.jpg";
 import certificateJsIntermediate from "../assets/certificates/certificate_jsIntermediate.jpg";
+import certificatePyBasics from "../assets/certificates/certificate_pyBasics.jpg";
 
 export const HERO_CONTENT = `As a web developer specializing in the MERN stack, I focus on creating user-friendly, dynamic applications. Whether it's building a sleek front-end with React or ensuring smooth back-end functionality with Node.js and MongoDB, I strive to craft solutions that meet both business needs and user expectations.`;
 
@@ -57,6 +58,15 @@ export const CERTIFICATE = [
       "This course covered advanced JavaScript concepts such as truthy and falsy values, ternary operators, recursion, and asynchronous programming (Fetch API, promises, async/await). I also worked with JSON, explored variable scope, and hoisting. A project on fetching and displaying movie data helped solidify these concepts.",
     date: "30th August, 2024",
     certificateLink: "https://programiz.pro/certificates/A9656AC427E6",
+  },
+  {
+    title: "Learn Python Basics",
+    issuer: "Programiz",
+    image: certificatePyBasics,
+    description:
+      "I learned core Python concepts, including variables, data types, control flow, and functions. The course included projects like computing grades and building a rock-paper-scissors game, reinforcing topics such as loops, dictionaries, and modules.",
+    date: "19th October, 2024",
+    certificateLink: "https://programiz.pro/certificates/D75348A8C855",
   },
 ];
 
