@@ -1,6 +1,6 @@
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb, SiPython } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
@@ -105,6 +105,20 @@ const Technologies = () => {
             rel="noopener noreferrer"
           >
             <SiMysql className="text-7xl text-cyan-700" />
+          </a>
+        </motion.div>
+        <motion.div
+          variants={iconVariants(6)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
+          <a
+            href="https://docs.python.org/3/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiPython className="text-7xl text-green-400" />
           </a>
         </motion.div>
       </motion.div>
