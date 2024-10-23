@@ -118,7 +118,7 @@ const Technologies = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SiPython className="text-7xl text-green-400" />
+            <SiPython className="text-7xl text-blue-600" />
           </a>
         </motion.div>
       </motion.div>
