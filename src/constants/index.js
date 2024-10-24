@@ -71,7 +71,7 @@ export const CERTIFICATE = [
 ];
 
 export const CONTACT = {
-  address: "Nayapati, Gokarneshwar, Kathmandu",
+  address: "Gokarneshwor, Kathmandu",
   phoneNo: "+977 9848063688",
   email: "raiarik97@gmail.com",
 };
