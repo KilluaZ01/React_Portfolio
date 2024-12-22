@@ -1,4 +1,3 @@
-import { EXPERIENCES } from "../constants";
 import { CERTIFICATE } from "../constants";
 import { motion } from "framer-motion";
 
@@ -20,21 +19,32 @@ const Certificate = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              className="relative w-full lg:w-1/4"
             >
-              <a
-                href={certificate.certificateLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
+                className="relative group rounded overflow-hidden"
+                style={{ width: "150px", height: "150px" }}
               >
-                <img
-                  className="mb-6 rounded"
-                  src={certificate.image}
-                  width={150}
-                  height={150}
-                  alt={certificate.title}
-                />
-              </a>
+                <a
+                  href={certificate.certificateLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full"
+                >
+                  <img
+                    className="block w-full h-full object-cover"
+                    src={certificate.image}
+                    width={150}
+                    height={150}
+                    alt={certificate.title}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white text-sm font-semibold">
+                      View Certificate
+                    </span>
+                  </div>
+                </a>
+              </div>
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}

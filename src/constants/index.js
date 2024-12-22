@@ -6,6 +6,7 @@ import PortfolioDemo from "../assets/projects/PortfolioDemo.mp4";
 import certificateJsBasics from "../assets/certificates/certificate_jsBasics.jpg";
 import certificateJsIntermediate from "../assets/certificates/certificate_jsIntermediate.jpg";
 import certificatePyBasics from "../assets/certificates/certificate_pyBasics.jpg";
+import certificatePyIntermediate from "../assets/certificates/certificate_pyIntermediate.png";
 
 export const HERO_CONTENT = `As a web developer specializing in the MERN stack, I focus on creating user-friendly, dynamic applications. Whether it's building a sleek front-end with React or ensuring smooth back-end functionality with Node.js and MongoDB, I strive to craft solutions that meet both business needs and user expectations.`;
 
@@ -75,6 +76,15 @@ export const CERTIFICATE = [
       "I learned core Python concepts, including variables, data types, control flow, and functions. The course included projects like computing grades and building a rock-paper-scissors game, reinforcing topics such as loops, dictionaries, and modules.",
     date: "19th October, 2024",
     certificateLink: "https://programiz.pro/certificates/D75348A8C855",
+  },
+  {
+    title: "Learn Python Intermediate",
+    issuer: "Programiz",
+    image: certificatePyIntermediate,
+    description:
+      "I advanced my Python skills by learning intermediate concepts such as writing Pythonic code using comprehensions, lambdas, and recursion, and mastering function arguments. I gained a deeper understanding of object-oriented programming, including classes, objects, inheritance, and practical OOP examples. The course also covered essential topics like exception handling, file and directory management, and creating modules and packages. Finally, I applied these concepts in hands-on projects, such as developing Rock, Paper, Scissors, Tic-Tac-Toe, and a QR Code Generator, reinforcing my understanding and preparing me for more complex Python applications.",
+    date: "11th November, 2024",
+    certificateLink: "https://programiz.pro/certificates/3EAD938A45F3",
   },
 ];
 
