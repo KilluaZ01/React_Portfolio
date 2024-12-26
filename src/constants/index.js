@@ -1,7 +1,9 @@
 import projectBrickSync from "../assets/projects/project_BrickSync.png";
 import projectPersonalPortfolio from "../assets/projects/project_PersonalPortfolio.png";
+import projectXoraLanding from "../assets/projects/project_XoraLanding.png";
 import BrickSyncDemo from "../assets/projects/BrickSyncDemo.mp4";
 import PortfolioDemo from "../assets/projects/PortfolioDemo.mp4";
+import XoraLandingDemo from "../assets/projects/XoraLandingDemo.mp4";
 
 import certificateJsBasics from "../assets/certificates/certificate_jsBasics.jpg";
 import certificateJsIntermediate from "../assets/certificates/certificate_jsIntermediate.jpg";
@@ -46,6 +48,17 @@ export const PROJECTS = [
     technologies: ["React", "Tailwind"],
     githubLink: "https://github.com/KilluaZ01/React_Portfolio.git",
     demoVideo: PortfolioDemo,
+  },
+  {
+    title: "Xora Landing Page",
+    image: projectXoraLanding,
+    description:
+      "Xora is a modern SaaS website with a sleek design, smooth animations, and intuitive navigation, built using React.js and Tailwind CSS.",
+    fullDescription:
+      "Xora is a modern SaaS website designed with React.js and Tailwind CSS. It features a clean, responsive design, smooth animations, and easy navigation for an excellent user experience. The site includes key sections like a hero, features, pricing, FAQ, testimonials, and a software download area. Built for speed and performance, Xora serves as a great reference for creating beautiful and functional web applications. Its reusable and well-structured code makes it ideal for developers, especially those just starting out.",
+    technologies: ["React", "Tailwind"],
+    githubLink: "https://github.com/KilluaZ01/React_Xora",
+    demoVideo: XoraLandingDemo,
   },
 ];
 
