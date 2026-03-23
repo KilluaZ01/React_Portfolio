@@ -9,19 +9,27 @@ import Certificate from "./components/Certificate";
 
 const App = () => {
   return (
-    <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
-      <div className="fixed top-0 -z-10 h-full w-full">
-        <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+    <div
+      id="top"
+      className="min-h-screen overflow-x-hidden bg-[var(--color-bg)] text-[var(--color-text)] antialiased"
+    >
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute left-[-8%] top-[-12%] h-[28rem] w-[28rem] rounded-full bg-[rgba(242,184,109,0.16)] blur-[120px]"></div>
+        <div className="absolute right-[-10%] top-[18%] h-[24rem] w-[24rem] rounded-full bg-[rgba(75,172,198,0.12)] blur-[120px]"></div>
+        <div className="absolute bottom-[-12%] left-[28%] h-[26rem] w-[26rem] rounded-full bg-[rgba(255,140,90,0.12)] blur-[140px]"></div>
+        <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.5)_1px,transparent_1px)] [background-size:84px_84px]"></div>
       </div>
-      <div className="container mx-auto px-8">
+      <div className="mx-6 max-w-8xl px-4 sm:px-6 lg:px-8">
         <Navbar />
-        <Hero />
-        <About />
-        <Technologies />
-        <Experience />
-        <Projects />
-        <Certificate />
-        <Contact />
+        <main className="space-y-6 pb-10">
+          <Hero />
+          <About />
+          <Technologies />
+          <Experience />
+          <Projects />
+          <Certificate />
+          <Contact />
+        </main>
       </div>
     </div>
   );

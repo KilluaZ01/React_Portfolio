@@ -1,4 +1,4 @@
-import { HERO_CONTENT } from "../constants";
+import { CONTACT, HERO_CONTENT, HERO_METRICS } from "../constants";
 import { motion } from "framer-motion";
 import profilePic from "../assets/Profile.jpg";
 
@@ -13,59 +13,112 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-600 pb-4 lg:mb-35">
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start">
+    <section className="section-shell px-6 py-10 sm:px-8 lg:px-10" id="home">
+      <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div>
+          <div className="flex flex-col items-start">
+            <motion.span
+              variants={container(0)}
+              initial="hidden"
+              animate="visible"
+              className="eyebrow mb-6"
+            >
+              Kathmandu based • Python Developer • Open to opportunities
+            </motion.span>
             <motion.h1
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-extralight tracking-tight lg:mt-16 lg:text-8xl"
+              className="display-font max-w-4xl text-6xl leading-none sm:text-7xl lg:text-[6.5rem]"
             >
-              Arik Rai
+              Building automation systems, web scrapers, and efficient workflows
+              that solve real-world problems.
             </motion.h1>
             <motion.span
               variants={container(0.5)}
               initial="hidden"
               animate="visible"
-              className="bg-gradient-to-r from-pink-300 via-state-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent"
+              className="mt-6 text-lg uppercase tracking-[0.28em] text-[var(--color-accent)] sm:text-xl"
             >
-              Full Stack Developer
+              Arik Rai • Python Developer
             </motion.span>
             <motion.p
               variants={container(1)}
               initial="hidden"
               animate="visible"
-              className="my-3 max-w-xl py-6 font-light"
+              className="my-4 max-w-2xl py-4 text-base leading-8 text-[var(--color-muted)] sm:text-lg"
             >
               {HERO_CONTENT}
             </motion.p>
-            <motion.a
-              variants={container(1)}
+
+            <motion.div
+              variants={container(1.1)}
               initial="hidden"
               animate="visible"
-              href="#projects"
-              className="px-8 py-4 my-3 text-lg font-light cursor-pointer text-white bg-indigo-800 rounded-lg shadow hover:bg-indigo-600 focus:outline-none focus:ring-4 focus:ring-indigo-400"
+              className="mt-4 flex flex-wrap gap-3"
             >
-              Check out my projects
-            </motion.a>
+              <a href="#projects" className="link-pill link-pill-primary">
+                View selected work
+              </a>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="link-pill link-pill-secondary"
+              >
+                Email me
+              </a>
+            </motion.div>
+
+            <motion.div
+              variants={container(1.2)}
+              initial="hidden"
+              animate="visible"
+              className="mt-8 grid w-full gap-4 sm:grid-cols-3"
+            >
+              {HERO_METRICS.map((metric) => (
+                <div key={metric.label} className="glass-card rounded-3xl p-4">
+                  <p className="display-font text-4xl text-[var(--color-accent)]">
+                    {metric.value}
+                  </p>
+                  <p className="mt-2 text-sm uppercase tracking-[0.22em] text-[var(--color-muted)]">
+                    {metric.label}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex justify-center">
+
+        <div className="lg:p-4">
+          <div className="relative mx-auto flex max-w-md justify-center">
+            <div className="absolute inset-0 translate-x-5 translate-y-5 rounded-[2rem] border border-white/10 bg-[rgba(255,255,255,0.03)]"></div>
             <motion.img
-              className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-full rounded-2xl sm:rounded-2xl sm:my-6"
+              className="relative aspect-[4/5] w-full rounded-[2rem] border border-white/10 object-cover shadow-2xl"
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
               src={profilePic}
-              alt="profilePic"
+              alt="Arik Rai"
             />
+
+            <motion.div
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.9, delay: 1.35 }}
+              className="glass-card absolute bottom-6 left-6 right-6 rounded-[1.75rem] p-5"
+            >
+              <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-muted)]">
+                What I focus on
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2 text-sm">
+                <span className="pill">Python automation</span>
+                <span className="pill">Web scraping & analysis</span>
+                <span className="pill">Workflow optimization</span>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
