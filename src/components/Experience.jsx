@@ -3,52 +3,61 @@ import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
-    <div className="border-b border-neutral-600 pb-4">
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
-      >
-        Experience
-      </motion.h1>
-      <div>
+    <section
+      className="section-shell px-6 py-10 sm:px-8 lg:px-10"
+      id="experience"
+    >
+      <div className="mb-10 max-w-3xl">
+        <span className="eyebrow">Experience</span>
+        <h2 className="section-title mt-5">
+          Hands-on work shaped by real project delivery.
+        </h2>
+      </div>
+
+      <div className="space-y-6">
         {EXPERIENCES.map((experience, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+          <div
+            key={index}
+            className="grid gap-4 rounded-[1.8rem] border border-white/10 bg-[rgba(255,255,255,0.03)] p-6 lg:grid-cols-[0.28fr_0.72fr]"
+          >
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              className="flex items-start"
             >
-              <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
+              <p className="pill text-xs uppercase tracking-[0.2em] text-[var(--color-muted)]">
+                {experience.year}
+              </p>
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
+              className="max-w-3xl"
             >
-              <h6 className="mb-2 font-semibold">
-                {experience.role} -{" "}
-                <span className="text-sm text-purple-100">
-                  {experience.company}
-                </span>
-              </h6>
-              <p className="mb-4 text-neutral-400">{experience.description}</p>
-              {experience.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
-                >
-                  {tech}
-                </span>
-              ))}
+              <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-accent)]">
+                {experience.company}
+              </p>
+              <h3 className="mt-3 text-2xl font-medium">{experience.role}</h3>
+              <p className="mt-4 text-base leading-8 text-[var(--color-muted)]">
+                {experience.description}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {experience.technologies.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="pill text-sm text-[var(--color-muted)]"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
