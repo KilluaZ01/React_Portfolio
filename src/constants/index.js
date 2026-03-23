@@ -5,31 +5,75 @@ import BrickSyncDemo from "../assets/projects/BrickSyncDemo.mp4";
 import PortfolioDemo from "../assets/projects/PortfolioDemo.mp4";
 import XoraLandingDemo from "../assets/projects/XoraLandingDemo.mp4";
 
+import certificatePyMaster from "../assets/certificates/certificate_pyMaster.png";
 import certificateJsBasics from "../assets/certificates/certificate_jsBasics.jpg";
 import certificateJsIntermediate from "../assets/certificates/certificate_jsIntermediate.jpg";
 import certificatePyBasics from "../assets/certificates/certificate_pyBasics.jpg";
 import certificatePyIntermediate from "../assets/certificates/certificate_pyIntermediate.png";
 
-export const HERO_CONTENT = `As a web developer specializing in the MERN stack, I focus on creating user-friendly, dynamic applications. Whether it's building a sleek front-end with React or ensuring smooth back-end functionality with Node.js and MongoDB, I strive to craft solutions that meet both business needs and user expectations.`;
+export const HERO_CONTENT = `Python Automation Developer focused on building efficient systems for web scraping, workflow automation, and process optimization. I create practical, scalable solutions that reduce manual effort and solve real-world problems through code.`;
 
-export const ABOUT_TEXT1 = `I'm Arik Rai, a web developer with a passion for creating interactive, efficient, and scalable web applications. My expertise lies in using the MERN stack (MongoDB, Express, React, Node.js) to build solutions that are not only visually appealing but also highly functional.`;
-export const ABOUT_TEXT2 = `I enjoy learning new technologies, solving problems, and continuously refining my skills. Outside of coding, I like exploring new tools and contributing to open-source projects.`;
-export const ABOUT_TEXT3 = `I’m always looking for exciting opportunities to collaborate on impactful projects and expand my knowledge.`;
+export const HERO_METRICS = [
+  {
+    value: "9+ months",
+    label: "professional experience",
+  },
+  {
+    value: "5+",
+    label: "automation & scraping projects",
+  },
+  {
+    value: "Python",
+    label: "primary technology",
+  },
+];
+
+export const ABOUT_TEXT1 = `I'm Arik Rai, a Python Automation Developer with hands-on experience in building efficient automation solutions, web scraping systems, and workflow optimization tools. I specialize in using Python to streamline processes, reduce manual effort, and solve real-world problems.`;
+
+export const ABOUT_TEXT2 = `I have worked on multiple freelance and personal projects involving automation, data extraction, and system design. My work includes building automated ad posting systems, data scraping tools, and game automation scripts, focusing on performance and reliability.`;
+
+export const ABOUT_TEXT3 = `As a recent BIT graduate, I am eager to further enhance my skills through advanced studies and continuously explore new technologies in software development, automation, and data-driven systems.`;
+
+export const ABOUT_PILLARS = [
+  {
+    title: "Automation-first mindset",
+    description:
+      "I focus on identifying repetitive tasks and building reliable automation systems to eliminate manual effort.",
+  },
+  {
+    title: "Efficient problem solving",
+    description:
+      "I design solutions that prioritize performance, scalability, and practical real-world impact over unnecessary complexity.",
+  },
+  {
+    title: "Continuous improvement",
+    description:
+      "I refine systems iteratively, optimizing workflows, improving reliability, and adapting to new challenges over time.",
+  },
+];
+
+export const WORK_PRINCIPLES = [
+  "Automation workflows designed for reliability and minimal human intervention.",
+  "Data extraction and processing systems built with accuracy and efficiency in mind.",
+  "Clean, maintainable Python code focused on scalability and real-world usability.",
+];
 
 export const EXPERIENCES = [
   {
-    year: "2022 - 2023",
-    role: "Full Stack Developer",
-    company: "Texas Imaginology",
-    description: `Led a team in developing a mobile application using Flutter, Node.js, and MongoDB. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with students to define project requirements and timelines.`,
-    technologies: ["Flutter", "Node.js", "MongoDB"],
+    year: "2025 - Present",
+    role: "Python Automation Developer",
+    company: "Zukti Tech",
+    description: `Developed and maintained Python-based automation solutions for web scraping, ad posting, and workflow optimization. Built scripts using Selenium and ADB to automate repetitive tasks, improving efficiency and reducing manual effort. Worked on Virtual Private Server (VPS), scheduling tasks, and ensuring reliable execution across multiple accounts.`,
+    technologies: ["Python", "Selenium", "ADB"],
   },
 ];
 
 export const PROJECTS = [
   {
     title: "BrickSync (Inventory & Expense Tracking App)",
-    image: projectBrickSync,
+    pinned: true,
+    categories: ["Full Stack"],
+    screenshots: [projectBrickSync, projectXoraLanding],
     description:
       "A fully functional full-stack inventory & expense tracking web app with features like product listing, inventory tracking, expense tracking, vehicle management, and user authentication.",
     fullDescription:
@@ -40,7 +84,9 @@ export const PROJECTS = [
   },
   {
     title: "Personal Portfolio",
-    image: projectPersonalPortfolio,
+    pinned: true,
+    categories: ["React"],
+    screenshots: [projectPersonalPortfolio, projectBrickSync],
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     fullDescription:
@@ -51,7 +97,9 @@ export const PROJECTS = [
   },
   {
     title: "Xora Landing Page",
-    image: projectXoraLanding,
+    pinned: false,
+    categories: ["React"],
+    screenshots: [projectXoraLanding, projectPersonalPortfolio],
     description:
       "Xora is a modern SaaS website with a sleek design, smooth animations, and intuitive navigation, built using React.js and Tailwind CSS.",
     fullDescription:
@@ -64,13 +112,13 @@ export const PROJECTS = [
 
 export const CERTIFICATE = [
   {
-    title: "Learn JavaScript Basics",
+    title: "Become a Python Master",
     issuer: "Programiz",
-    image: certificateJsBasics,
+    image: certificatePyMaster,
     description:
-      "Completed a foundational JavaScript course covering essential topics such as data types, operators, control flow, functions, objects, arrays, and basic error handling.",
-    date: "26th August, 2024",
-    certificateLink: "https://programiz.pro/certificates/B7B0A8A62F2E",
+      "Completed a comprehensive Python certification covering fundamental to intermediate concepts, including data structures, control flow, functions, and object-oriented programming. Built multiple hands-on projects such as games and utility tools, and solved numerous interview-style problems to strengthen problem-solving abilities and write efficient, Pythonic code.",
+    date: "12th February, 2025",
+    certificateLink: "https://programiz.pro/certificates/E889C307D67B",
   },
   {
     title: "Learn JavaScript Intermediate",
@@ -81,28 +129,43 @@ export const CERTIFICATE = [
     date: "30th August, 2024",
     certificateLink: "https://programiz.pro/certificates/A9656AC427E6",
   },
-  {
-    title: "Learn Python Basics",
-    issuer: "Programiz",
-    image: certificatePyBasics,
-    description:
-      "I learned core Python concepts, including variables, data types, control flow, and functions. The course included projects like computing grades and building a rock-paper-scissors game, reinforcing topics such as loops, dictionaries, and modules.",
-    date: "19th October, 2024",
-    certificateLink: "https://programiz.pro/certificates/D75348A8C855",
-  },
-  {
-    title: "Learn Python Intermediate",
-    issuer: "Programiz",
-    image: certificatePyIntermediate,
-    description:
-      "I advanced my Python skills by learning intermediate concepts such as writing Pythonic code using comprehensions, lambdas, and recursion, and mastering function arguments. I gained a deeper understanding of object-oriented programming, including classes, objects, inheritance, and practical OOP examples. The course also covered essential topics like exception handling, file and directory management, and creating modules and packages. Finally, I applied these concepts in hands-on projects, such as developing Rock, Paper, Scissors, Tic-Tac-Toe, and a QR Code Generator, reinforcing my understanding and preparing me for more complex Python applications.",
-    date: "11th November, 2024",
-    certificateLink: "https://programiz.pro/certificates/3EAD938A45F3",
-  },
+  // {
+  //   title: "Learn Python Basics",
+  //   issuer: "Programiz",
+  //   image: certificatePyBasics,
+  //   description:
+  //     "I learned core Python concepts, including variables, data types, control flow, and functions. The course included projects like computing grades and building a rock-paper-scissors game, reinforcing topics such as loops, dictionaries, and modules.",
+  //   date: "19th October, 2024",
+  //   certificateLink: "https://programiz.pro/certificates/D75348A8C855",
+  // },
+  // {
+  //   title: "Learn Python Intermediate",
+  //   issuer: "Programiz",
+  //   image: certificatePyIntermediate,
+  //   description:
+  //     "I advanced my Python skills by learning intermediate concepts such as writing Pythonic code using comprehensions, lambdas, and recursion, and mastering function arguments. I gained a deeper understanding of object-oriented programming, including classes, objects, inheritance, and practical OOP examples. The course also covered essential topics like exception handling, file and directory management, and creating modules and packages. Finally, I applied these concepts in hands-on projects, such as developing Rock, Paper, Scissors, Tic-Tac-Toe, and a QR Code Generator, reinforcing my understanding and preparing me for more complex Python applications.",
+  //   date: "11th November, 2024",
+  //   certificateLink: "https://programiz.pro/certificates/3EAD938A45F3",
+  // },
 ];
 
 export const CONTACT = {
   address: "Gokarneshwor, Kathmandu",
   phoneNo: "+977 9848063688",
-  email: "raiarik97@gmail.com",
+  email: "info@arikrai.com.np",
 };
+
+export const SOCIAL_LINKS = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/arik-rai-648b5b250",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/KilluaZ01",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/arik_raii/",
+  },
+];
