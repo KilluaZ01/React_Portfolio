@@ -3,77 +3,72 @@ import { motion } from "framer-motion";
 
 const Certificate = () => {
   return (
-    <div className="border-b border-neutral-600 pb-4">
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
-      >
-        Certificates
-      </motion.h1>
-      <div>
+    <section
+      className="section-shell px-6 py-10 sm:px-8 lg:px-10"
+      id="certificates"
+    >
+      <div className="mb-10 max-w-3xl">
+        <span className="eyebrow">Certificates</span>
+        <h2 className="section-title mt-5">
+          Recent learning that strengthened my fundamentals.
+        </h2>
+      </div>
+
+      <div className="grid gap-5 lg:grid-cols-2">
         {CERTIFICATE.map((certificate, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+          <div
+            key={index}
+            className="grid gap-4 rounded-[1.75rem] border border-white/10 bg-[rgba(255,255,255,0.03)] p-5 sm:grid-cols-[150px_1fr]"
+          >
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="relative w-full lg:w-1/4"
+              transition={{ duration: 0.8 }}
+              className="relative"
             >
-              <div
-                className="relative group rounded overflow-hidden"
-                style={{ width: "150px", height: "150px" }}
+              <a
+                href={certificate.certificateLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
               >
-                <a
-                  href={certificate.certificateLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full h-full"
-                >
-                  <img
-                    className="block w-full h-full object-cover"
-                    src={certificate.image}
-                    width={150}
-                    height={150}
-                    alt={certificate.title}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white text-sm font-semibold">
-                      View Certificate
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h6 className="mb-2 font-semibold">
-                {certificate.title} -{" "}
-                <span className="text-sm text-purple-100">
-                  {certificate.issuer}
+                <img
+                  className="h-[150px] w-full rounded-[1.25rem] border border-white/10 object-cover"
+                  src={certificate.image}
+                  width={150}
+                  height={150}
+                  alt={certificate.title}
+                />
+                <span className="mt-3 inline-flex text-xs uppercase tracking-[0.2em] text-[var(--color-accent)]">
+                  View certificate
                 </span>
-              </h6>
-              <p className="mb-4 text-neutral-400">{certificate.description}</p>
+              </a>
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              transition={{ duration: 0.8 }}
+              className="flex flex-col justify-between"
             >
-              <p className="mb-2 text-sm text-neutral-400 lg:text-end">
+              <div>
+                <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-accent)]">
+                  {certificate.issuer}
+                </p>
+                <h3 className="mt-2 text-xl font-medium">
+                  {certificate.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">
+                  {certificate.description}
+                </p>
+              </div>
+              <p className="mt-4 text-xs uppercase tracking-[0.2em] text-[var(--color-muted)]">
                 {certificate.date}
               </p>
             </motion.div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
