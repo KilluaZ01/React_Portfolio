@@ -1,15 +1,25 @@
+import projectCraigslist1 from "../assets/projects/craigslist/main_photo.png";
+import projectCraigslist2 from "../assets/projects/craigslist/photo1.png";
+import projectCraigslist3 from "../assets/projects/craigslist/photo2.png";
+import projectCraigslist4 from "../assets/projects/craigslist/photo3.png";
+import projectCraigslist5 from "../assets/projects/craigslist/photo4.png";
+import projectCraigslist6 from "../assets/projects/craigslist/photo5.png";
+
+import projectGame1 from "../assets/projects/chaos/main_photo.png";
+import projectGame2 from "../assets/projects/chaos/photo1.png";
+import projectGame3 from "../assets/projects/chaos/photo2.png";
+import projectGame4 from "../assets/projects/chaos/photo3.png";
+import projectGame5 from "../assets/projects/chaos/photo4.png";
+
 import projectBrickSync from "../assets/projects/project_BrickSync.png";
 import projectPersonalPortfolio from "../assets/projects/project_PersonalPortfolio.png";
 import projectXoraLanding from "../assets/projects/project_XoraLanding.png";
-import BrickSyncDemo from "../assets/projects/BrickSyncDemo.mp4";
-import PortfolioDemo from "../assets/projects/PortfolioDemo.mp4";
-import XoraLandingDemo from "../assets/projects/XoraLandingDemo.mp4";
 
 import certificatePyMaster from "../assets/certificates/certificate_pyMaster.png";
-import certificateJsBasics from "../assets/certificates/certificate_jsBasics.jpg";
 import certificateJsIntermediate from "../assets/certificates/certificate_jsIntermediate.jpg";
-import certificatePyBasics from "../assets/certificates/certificate_pyBasics.jpg";
-import certificatePyIntermediate from "../assets/certificates/certificate_pyIntermediate.png";
+// import certificateJsBasics from "../assets/certificates/certificate_jsBasics.jpg";
+// import certificatePyBasics from "../assets/certificates/certificate_pyBasics.jpg";
+// import certificatePyIntermediate from "../assets/certificates/certificate_pyIntermediate.png";
 
 export const HERO_CONTENT = `Python Automation Developer focused on building efficient systems for web scraping, workflow automation, and process optimization. I create practical, scalable solutions that reduce manual effort and solve real-world problems through code.`;
 
@@ -70,6 +80,50 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "Craigslist Automation Bot (Multi-Account Ad Posting System)",
+    pinned: true,
+    categories: ["Automation"],
+    screenshots: [
+      projectCraigslist1,
+      projectCraigslist2,
+      projectCraigslist3,
+      projectCraigslist4,
+      projectCraigslist5,
+      projectCraigslist6,
+    ],
+    description:
+      "A powerful automation system for managing multi-account Craigslist ad posting, renewal, and campaign scheduling with AI-powered content generation and anti-detection mechanisms.",
+    fullDescription:
+      "This project is a fully featured Craigslist automation bot designed to streamline large-scale ad posting and management across multiple accounts. It includes a custom-built Tkinter GUI for managing accounts, proxies, campaigns, and scheduling, providing a centralized dashboard for complete control over automation workflows.\n\nThe system supports multi-account handling with proxy binding and session persistence, allowing seamless switching between accounts while maintaining login states using cookies. It automates the entire posting pipeline, including category selection, geo-targeting, dynamic form filling, and image uploads.\n\nTo enhance content quality and uniqueness, the bot integrates AI-based ad rewriting using the DeepSeek API, generating multiple variations of titles and descriptions based on configurable strategies (per account, per post, or shared variants).\n\nAn advanced image processing module modifies uploaded images by resizing, adding pixel noise, and stripping metadata to bypass duplicate detection systems. Additionally, the bot includes CAPTCHA detection hooks and manual/extendable solving support, along with logic to handle phone/email verification scenarios.\n\nThe platform also features an automated ad renewal system that identifies eligible listings based on time thresholds and renews them with configurable delays. Campaign scheduling, logging, and error handling ensure stable long-term operation.\n\nOverall, this project demonstrates expertise in browser automation, anti-detection strategies, API integration, and building scalable automation tools with real-world constraints.",
+    technologies: [
+      "Python",
+      "Selenium",
+      "Tkinter",
+      "OpenAI SDK (DeepSeek)",
+      "JSON",
+      "Pillow",
+    ],
+    githubLink: "https://github.com/KilluaZ01/craigslist_bot",
+  },
+  {
+    title: "Multi-Instance Game Automation Bot",
+    pinned: true,
+    categories: ["Automation"],
+    screenshots: [
+      projectGame1,
+      projectGame2,
+      projectGame3,
+      projectGame4,
+      projectGame5,
+    ],
+    description:
+      "A scalable multi-instance mobile game automation system built for mobile devices, enabling parallel execution of ADB commands, automated workflows, and high-performance botting across 100+ devices.",
+    fullDescription:
+      "The Multi-Instance Game Automation Bot is a high-performance automation framework designed to control and manage hundreds of devices simultaneously. Built using a modular architecture, the system replaces traditional local emulator integration, allowing asynchronous and synchronous execution of ADB commands across multiple instances.\n\nThe bot supports large-scale automation workflows such as account creation, in-game task execution, reward claiming, and scripted interactions, all executed in parallel across instances. A custom action engine handles core operations like tapping, swiping, text input, and app launching, while a workflow engine processes structured step sequences to automate complex game logic.\n\nTo ensure flexibility and scalability, the system is designed with reusable components, allowing rapid adaptation to different games by modifying workflows and templates without changing the core logic. The integration of threaded execution and batch processing ensures efficient resource utilization, making it capable of handling over 100 devices concurrently.\n\nThis project demonstrates advanced automation techniques, API integration, multi-threading, and scalable system design, making it a powerful solution for large-scale mobile automation tasks.",
+    technologies: ["Python", "ADB", "Threading", "OpenCV"],
+    githubLink: "https://github.com/KilluaZ01/Chaos-Zero-Nightmare-v2",
+  },
+  {
     title: "BrickSync (Inventory & Expense Tracking App)",
     pinned: true,
     categories: ["Full Stack"],
@@ -80,11 +134,10 @@ export const PROJECTS = [
       "BrickSync is a comprehensive inventory management and expense tracking web application designed specifically for suppliers. It enables users to efficiently manage product stock by listing items, monitoring sales, and logging restocks. The app features low-stock alerts, ensuring timely replenishment of inventory, and provides detailed insights into revenue, expenses, and profit, offering a clear overview of financial performance.\n\nIn addition to inventory management, BrickSync helps track fuel expenses for owned vehicles, maintaining detailed histories of restocking, sales, and refueling activities. To support better decision-making, the app includes robust reporting tools, allowing users to generate charts and summaries of expenses and stock levels in PDF format. With its user-friendly interface and powerful functionality, BrickSync is an essential tool for streamlining supply chain operations and optimizing financial management for suppliers.",
     technologies: ["React", "Tailwind", "Node.js", "MongoDB"],
     githubLink: "https://github.com/KilluaZ01/BrickSync.git",
-    demoVideo: BrickSyncDemo,
   },
   {
     title: "Personal Portfolio",
-    pinned: true,
+    pinned: false,
     categories: ["React"],
     screenshots: [projectPersonalPortfolio, projectBrickSync],
     description:
@@ -93,7 +146,6 @@ export const PROJECTS = [
       "A personal portfolio website designed to showcase an individual's professional projects, skills, experience, and contact information. The website serves as a digital resume, highlighting the user's expertise and work across various fields such as web development, graphic design, content creation, or any other industry-specific skills. It features a clean, user-friendly layout with sections for presenting completed projects, providing details on technical and soft skills, and offering insight into personal achievements and professional background. The portfolio may also include client testimonials, downloadable resumes, and a contact form or social media links to make it easy for potential employers, collaborators, or clients to get in touch",
     technologies: ["React", "Tailwind"],
     githubLink: "https://github.com/KilluaZ01/React_Portfolio.git",
-    demoVideo: PortfolioDemo,
   },
   {
     title: "Xora Landing Page",
@@ -106,7 +158,6 @@ export const PROJECTS = [
       "Xora is a modern SaaS website designed with React.js and Tailwind CSS. It features a clean, responsive design, smooth animations, and easy navigation for an excellent user experience. The site includes key sections like a hero, features, pricing, FAQ, testimonials, and a software download area. Built for speed and performance, Xora serves as a great reference for creating beautiful and functional web applications. Its reusable and well-structured code makes it ideal for developers, especially those just starting out.",
     technologies: ["React", "Tailwind"],
     githubLink: "https://github.com/KilluaZ01/React_Xora",
-    demoVideo: XoraLandingDemo,
   },
 ];
 

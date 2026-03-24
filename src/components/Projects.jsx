@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useState } from "react";
 
-const categoryFilters = ["Python", "React", "Full Stack"];
+const categoryFilters = ["Automation", "React", "Full Stack"];
 
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState(null);
