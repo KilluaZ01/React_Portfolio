@@ -17,6 +17,7 @@ import projectXoraLanding from "../assets/projects/project_XoraLanding.png";
 
 import certificatePyMaster from "../assets/certificates/certificate_pyMaster.png";
 import certificateJsIntermediate from "../assets/certificates/certificate_jsIntermediate.jpg";
+import certificateAiFluency from "../assets/certificates/certificate_aiFluency.jpg";
 // import certificateJsBasics from "../assets/certificates/certificate_jsBasics.jpg";
 // import certificatePyBasics from "../assets/certificates/certificate_pyBasics.jpg";
 // import certificatePyIntermediate from "../assets/certificates/certificate_pyIntermediate.png";
@@ -127,7 +128,7 @@ export const PROJECTS = [
     title: "BrickSync (Inventory & Expense Tracking App)",
     pinned: true,
     categories: ["Full Stack"],
-    screenshots: [projectBrickSync, projectXoraLanding],
+    screenshots: [projectBrickSync],
     description:
       "A fully functional full-stack inventory & expense tracking web app with features like product listing, inventory tracking, expense tracking, vehicle management, and user authentication.",
     fullDescription:
@@ -139,7 +140,7 @@ export const PROJECTS = [
     title: "Personal Portfolio",
     pinned: false,
     categories: ["React"],
-    screenshots: [projectPersonalPortfolio, projectBrickSync],
+    screenshots: [projectPersonalPortfolio],
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     fullDescription:
@@ -151,7 +152,7 @@ export const PROJECTS = [
     title: "Xora Landing Page",
     pinned: false,
     categories: ["React"],
-    screenshots: [projectXoraLanding, projectPersonalPortfolio],
+    screenshots: [projectXoraLanding],
     description:
       "Xora is a modern SaaS website with a sleek design, smooth animations, and intuitive navigation, built using React.js and Tailwind CSS.",
     fullDescription:
@@ -163,12 +164,21 @@ export const PROJECTS = [
 
 export const CERTIFICATE = [
   {
+    title: "AI Fluency for Students",
+    issuer: "Anthropic Education",
+    image: certificateAiFluency,
+    description:
+      "This course introduced core concepts of artificial intelligence with a focus on practical usage and responsible AI. I learned how to effectively interact with AI systems through prompt design, understand model capabilities and limitations, and apply AI tools to enhance productivity, learning, and problem-solving. The course also emphasized ethical considerations, safety, and critical thinking when working with AI-generated outputs.",
+    date: "March 23, 2026",
+    certificateLink: "https://verify.skilljar.com/c/zfpppm8hv5bv",
+  },
+  {
     title: "Become a Python Master",
     issuer: "Programiz",
     image: certificatePyMaster,
     description:
       "Completed a comprehensive Python certification covering fundamental to intermediate concepts, including data structures, control flow, functions, and object-oriented programming. Built multiple hands-on projects such as games and utility tools, and solved numerous interview-style problems to strengthen problem-solving abilities and write efficient, Pythonic code.",
-    date: "12th February, 2025",
+    date: "February 12, 2025",
     certificateLink: "https://programiz.pro/certificates/E889C307D67B",
   },
   {
@@ -177,7 +187,7 @@ export const CERTIFICATE = [
     image: certificateJsIntermediate,
     description:
       "This course covered advanced JavaScript concepts such as truthy and falsy values, ternary operators, recursion, and asynchronous programming (Fetch API, promises, async/await). I also worked with JSON, explored variable scope, and hoisting. A project on fetching and displaying movie data helped solidify these concepts.",
-    date: "30th August, 2024",
+    date: "August 30, 2024",
     certificateLink: "https://programiz.pro/certificates/A9656AC427E6",
   },
   // {
