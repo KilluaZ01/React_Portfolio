@@ -22,15 +22,15 @@ import certificateAiFluency from "../assets/certificates/certificate_aiFluency.j
 // import certificatePyBasics from "../assets/certificates/certificate_pyBasics.jpg";
 // import certificatePyIntermediate from "../assets/certificates/certificate_pyIntermediate.png";
 
-export const HERO_CONTENT = `Python Automation Developer focused on building efficient systems for web scraping, workflow automation, and process optimization. I create practical, scalable solutions that reduce manual effort and solve real-world problems through code.`;
+export const HERO_CONTENT = `Junior Python Developer focused on building efficient systems for web scraping, workflow automation, and process optimization. I create practical, scalable solutions that reduce manual effort and solve real-world problems through code.`;
 
 export const HERO_METRICS = [
   {
-    value: "9+ months",
+    value: "8+ months",
     label: "professional experience",
   },
   {
-    value: "5+",
+    value: "4+",
     label: "automation & scraping projects",
   },
   {
@@ -39,9 +39,9 @@ export const HERO_METRICS = [
   },
 ];
 
-export const ABOUT_TEXT1 = `I'm Arik Rai, a Python Automation Developer with hands-on experience in building efficient automation solutions, web scraping systems, and workflow optimization tools. I specialize in using Python to streamline processes, reduce manual effort, and solve real-world problems.`;
+export const ABOUT_TEXT1 = `I'm Arik Rai, a Junior Python Developer with hands-on experience in building efficient automation solutions, web scraping systems, and workflow optimization tools. I specialize in using Python to streamline processes, reduce manual effort, and solve real-world problems.`;
 
-export const ABOUT_TEXT2 = `I have worked on multiple freelance and personal projects involving automation, data extraction, and system design. My work includes building automated ad posting systems, data scraping tools, and game automation scripts, focusing on performance and reliability.`;
+export const ABOUT_TEXT2 = `I have worked on multiple projects involving automation, data extraction, and system design. My work includes building automated ad posting systems, data scraping tools, and game automation scripts, focusing on performance and reliability.`;
 
 export const ABOUT_TEXT3 = `As a recent BIT graduate, I am eager to further enhance my skills through advanced studies and continuously explore new technologies in software development, automation, and data-driven systems.`;
 
@@ -72,7 +72,7 @@ export const WORK_PRINCIPLES = [
 export const EXPERIENCES = [
   {
     year: "2025 - Present",
-    role: "Python Automation Developer",
+    role: "Junior Python Developer",
     company: "Zukti Tech",
     description: `Developed and maintained Python-based automation solutions for web scraping, ad posting, and workflow optimization. Built scripts using Selenium and ADB to automate repetitive tasks, improving efficiency and reducing manual effort. Worked on Virtual Private Server (VPS), scheduling tasks, and ensuring reliable execution across multiple accounts.`,
     technologies: ["Python", "Selenium", "ADB"],

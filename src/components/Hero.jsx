@@ -23,7 +23,7 @@ const Hero = () => {
               animate="visible"
               className="eyebrow mb-6"
             >
-              Kathmandu based • Python Developer • Open to opportunities
+              Kathmandu based • Junior Python Developer • Open to opportunities
             </motion.span>
             <motion.h1
               variants={container(0)}
@@ -40,7 +40,7 @@ const Hero = () => {
               animate="visible"
               className="mt-6 text-lg uppercase tracking-[0.28em] text-[var(--color-accent)] sm:text-xl"
             >
-              Arik Rai • Python Developer
+              Arik Rai • Junior Python Developer
             </motion.span>
             <motion.p
               variants={container(1)}
