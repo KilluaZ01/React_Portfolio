@@ -71,11 +71,11 @@ export const WORK_PRINCIPLES = [
 
 export const EXPERIENCES = [
   {
-    year: "2025 - Present",
+    year: "Oct 2025 - Present",
     role: "Junior Python Developer",
     company: "Zukti Tech",
-    description: `Developed and maintained Python-based automation solutions for web scraping, ad posting, and workflow optimization. Built scripts using Selenium and ADB to automate repetitive tasks, improving efficiency and reducing manual effort. Worked on Virtual Private Server (VPS), scheduling tasks, and ensuring reliable execution across multiple accounts.`,
-    technologies: ["Python", "Selenium", "ADB"],
+    description: `Developed Python-based automation solutions for web scraping, data extraction, ad posting workflows, and computer vision tasks using OpenCV. Worked on Virtual Private Server deployment and task scheduling to ensure consistent execution across client projects. All work completed under senior mentorship following professional development standards.`,
+    technologies: ["Python", "Selenium", "ADB", "Pandas"],
   },
 ];
 
@@ -217,10 +217,10 @@ export const CONTACT = {
 };
 
 export const SOCIAL_LINKS = [
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/arik-rai-648b5b250",
-  },
+  // {
+  //   label: "LinkedIn",
+  //   href: "https://www.linkedin.com/in/arik-rai-648b5b250",
+  // },
   {
     label: "GitHub",
     href: "https://github.com/KilluaZ01",

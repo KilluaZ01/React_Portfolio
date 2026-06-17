@@ -20,8 +20,8 @@ const Contact = () => {
             If you need a developer who can ship clean work, let’s talk.
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--color-muted)]">
-            I’m open to freelance work, collaborative builds, and full-time
-            opportunities where thoughtful product development matters.
+            I’m open to freelance work, collaborative builds, and opportunities
+            where thoughtful product development matters.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
