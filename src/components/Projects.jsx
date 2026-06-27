@@ -1,6 +1,11 @@
 import { PROJECTS } from "../constants";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaGithub,
+  FaGlobe,
+} from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useState } from "react";
 
@@ -280,6 +285,7 @@ const Projects = () => {
                       >
                         Close spotlight
                       </button>
+
                       <a
                         href={project.githubLink}
                         target="_blank"
@@ -288,6 +294,18 @@ const Projects = () => {
                       >
                         View source on GitHub
                       </a>
+
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="link-pill link-pill-primary gap-3"
+                        >
+                          <FaGlobe />
+                          Live Demo
+                        </a>
+                      )}
                     </div>
                   </motion.div>
                 </>
@@ -299,14 +317,30 @@ const Projects = () => {
                       <h3 className="text-2xl font-medium leading-tight">
                         {project.title}
                       </h3>
-                      <a
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:-translate-y-0.5 hover:border-white/20"
-                      >
-                        <FaGithub className="text-xl" />
-                      </a>
+
+                      <div className="flex gap-2">
+                        {project.liveLink && (
+                          <a
+                            href={project.liveLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:-translate-y-0.5 hover:border-white/20"
+                            title="Live Demo"
+                          >
+                            <FaGlobe className="text-lg" />
+                          </a>
+                        )}
+
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:-translate-y-0.5 hover:border-white/20"
+                          title="GitHub Repository"
+                        >
+                          <FaGithub className="text-xl" />
+                        </a>
+                      </div>
                     </div>
                     <p className="mt-4 flex-1 text-sm leading-7 text-[var(--color-muted)]">
                       {project.description}

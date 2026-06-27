@@ -15,6 +15,13 @@ import projectBrickSync from "../assets/projects/project_BrickSync.png";
 import projectPersonalPortfolio from "../assets/projects/project_PersonalPortfolio.png";
 import projectXoraLanding from "../assets/projects/project_XoraLanding.png";
 
+import projectWorldCup1 from "../assets/projects/worldcup/main_photo.png";
+import projectWorldCup2 from "../assets/projects/worldcup/photo1.png";
+import projectWorldCup3 from "../assets/projects/worldcup/photo2.png";
+import projectWorldCup4 from "../assets/projects/worldcup/photo3.png";
+import projectWorldCup5 from "../assets/projects/worldcup/photo4.png";
+import projectWorldCup6 from "../assets/projects/worldcup/photo5.png";
+
 import certificatePyMaster from "../assets/certificates/certificate_pyMaster.png";
 import certificateJsIntermediate from "../assets/certificates/certificate_jsIntermediate.jpg";
 import certificateAiFluency from "../assets/certificates/certificate_aiFluency.jpg";
@@ -81,6 +88,34 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "Automated Sports Data Pipeline & Prediction Engine",
+    pinned: true,
+    categories: ["Full Stack"],
+    screenshots: [
+      projectWorldCup1,
+      projectWorldCup2,
+      projectWorldCup3,
+      projectWorldCup4,
+      projectWorldCup5,
+      projectWorldCup6,
+    ],
+    description:
+      "A Python/FastAPI backend with an automated, idempotent data ingestion pipeline that syncs live tournament results from an external source on a scheduled job, paired with a custom rules engine for outcome resolution and group-stage standings computation.",
+    fullDescription:
+      "This project focuses on building a reliable data pipeline for keeping a relational database synchronized with live tournament data without duplicates, paid APIs, or manual intervention. The ingestion layer, written in Python, runs on a scheduled GitHub Actions workflow, fetches match data from a free external source, handles inconsistent date/time formats, filters unresolved future-bracket placeholders, and generates deterministic identifiers to support idempotent upserts. Midway through development, I had to replace the original paid API with a free static dataset, redesigning the parsing and deduplication logic without changing the database schema or downstream services.A Python/SQLAlchemy rules engine resolves prediction outcomes, including tie scenarios, while a standings service computes wins, draws, losses, goal difference, and points directly from raw match data to ensure consistency and avoid storing derived state. The backend is built with FastAPI, PostgreSQL (Neon), SQLAlchemy, and JWT authentication, exposing APIs for matches, leaderboards, and room-based predictions. The React/TypeScript frontend provides match feeds, group standings, and leaderboard views, while the primary engineering challenge and focus of the project remains data ingestion, synchronization, and consistency guarantees. The project also involved deployment troubleshooting, including Python build compatibility issues on Render and CORS configuration across independently hosted services.",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "React",
+      "Render",
+      "Vercel",
+    ],
+    githubLink: "https://github.com/KilluaZ01/Worldcup_Project",
+    liveLink: "https://worldcup-project-psi.vercel.app",
+  },
+  {
     title: "Craigslist Automation Bot (Multi-Account Ad Posting System)",
     pinned: true,
     categories: ["Automation"],
@@ -108,7 +143,7 @@ export const PROJECTS = [
   },
   {
     title: "Multi-Instance Game Automation Bot",
-    pinned: true,
+    pinned: false,
     categories: ["Automation"],
     screenshots: [
       projectGame1,
